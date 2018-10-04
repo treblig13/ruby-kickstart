@@ -7,5 +7,12 @@
 
 class String
   def every_other_char
+    array = []
+    self.split(//).each_with_index do |ch, id|
+      if id.even?
+        array << ch
+      end
+    end
+    array.join('')
   end
 end
